@@ -5,8 +5,8 @@ from pickle import load
 
 model1 = load(open("PYTN_KampusMerdeka_fp2_Athifah_Darren/logistic_regression_model.json","rb"))
 model2 = load(open("PYTN_KampusMerdeka_fp2_Athifah_Darren/support_vector_machine_model.json","rb"))
-data_clean = pd.read_csv("data_clean.csv")
-features = pd.read_csv("features.csv")
+data_clean = pd.read_csv("PYTN_KampusMerdeka_fp2_Athifah_Darren/data_clean.csv")
+features = pd.read_csv("PYTN_KampusMerdeka_fp2_Athifah_Darren/features.csv")
 
 def predict(model,mintemp,maxtemp,rainfall,windgustspeed,humidity9am,humidity3pm,pressure9am,pressure3pm,temp3pm,location,windgustdir,winddir9am,winddir3pm,raintoday):
     inputs = pd.DataFrame(columns=features.columns)
