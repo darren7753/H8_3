@@ -8,6 +8,8 @@ model2 = load(open("PYTN_KampusMerdeka_fp2_Athifah_Darren/support_vector_machine
 data_clean = pd.read_csv("PYTN_KampusMerdeka_fp2_Athifah_Darren/data_clean.csv")
 features = pd.read_csv("PYTN_KampusMerdeka_fp2_Athifah_Darren/features.csv")
 
+@st.cache
+
 def predict(model,mintemp,maxtemp,rainfall,windgustspeed,humidity9am,humidity3pm,pressure9am,pressure3pm,temp3pm,location,windgustdir,winddir9am,winddir3pm,raintoday):
     inputs = pd.DataFrame(columns=features.columns)
     location_code = [0 for i in inputs.columns[pd.Series(inputs.columns).str.startswith("location")]]
