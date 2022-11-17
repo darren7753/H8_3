@@ -3,8 +3,8 @@ import pandas as pd
 import streamlit as st
 from pickle import load
 
-model1 = load(open("logistic_regression_model.json","rb"))
-model2 = load(open("support_vector_machine_model.json","rb"))
+model1 = load(open("PYTN_KampusMerdeka_fp2_Athifah_Darren/logistic_regression_model.json","rb"))
+model2 = load(open("PYTN_KampusMerdeka_fp2_Athifah_Darren/support_vector_machine_model.json","rb"))
 data_clean = pd.read_csv("data_clean.csv")
 features = pd.read_csv("features.csv")
 
