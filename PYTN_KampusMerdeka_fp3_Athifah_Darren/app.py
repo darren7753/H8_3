@@ -73,7 +73,7 @@ proba = model.predict_proba(pd.DataFrame([inputs],columns=df.columns[:-1]))[0]
 if st.button("Click here to predict"):
     fig = go.Figure(go.Bar(
         x=[proba[0] * 100,proba[1] * 100],
-        y=["Dead","Survive"],
+        y=["Die","Survive"],
         orientation="h",
         marker=dict(color=["rgb(26,118,255)" if prob == np.max(proba) else "rgb(55,83,109)" for prob in proba]),
     ))
