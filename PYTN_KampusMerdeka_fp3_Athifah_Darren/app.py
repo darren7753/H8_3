@@ -7,13 +7,17 @@ from pickle import load
 from PIL import Image
 
 # Load
-rf = load(open("PYTN_KampusMerdeka_fp3_Athifah_Darren/random_forest_smote_tomek_links_model.json","rb"))
-gb = load(open("PYTN_KampusMerdeka_fp3_Athifah_Darren/gradient_boosting_smote_tomek_links_model.json","rb"))
+rf = load(open("PYTN_KampusMerdeka_fp3_Athifah_Darren/random_forest_smote_enn_model.json","rb"))
+gb = load(open("PYTN_KampusMerdeka_fp3_Athifah_Darren/gradient_boosting_smote_enn_model.json","rb"))
 df = pd.read_csv("PYTN_KampusMerdeka_fp3_Athifah_Darren/heart_failure_clinical_records_dataset.csv")
 cover_img = Image.open("PYTN_KampusMerdeka_fp3_Athifah_Darren/dataset-cover.png")
 
 # Title
 st.markdown("<h1 style='text-align: center;'>Heart Failure Prediction</h1>",unsafe_allow_html=True)
+st.markdown(
+    "<p style='text-align: center;'>Made by <b><a href='https://www.linkedin.com/in/athifahrh/'>'Athifah Radhiyah Habibilah</a></b> & <b><a href='https://www.linkedin.com/in/mathewdarren/'>Mathew Darren Kusuma</a></b></p>",
+    unsafe_allow_html=True
+)
 st.image(cover_img)
 st.markdown("""<hr style="height:1px;border:none;color:#333;background-color:#333;"/>""",unsafe_allow_html=True)
 
@@ -40,7 +44,7 @@ with col2:
     serum_sodium = st.number_input("Serum Sodium (mEq/L)",value=140)
     sex = st.selectbox("Sex (Boolean)",["Male","Female"])
     smoking = st.selectbox("Smoking (Boolean)",["Yes","No"])
-    time = st.number_input("Time (Days)",value=10)
+    time = st.number_input("Time (Days)",value=80)
 
 st.markdown("""<hr style="height:1px;border:none;color:#333;background-color:#333;"/>""",unsafe_allow_html=True)
 
@@ -69,7 +73,7 @@ proba = model.predict_proba(pd.DataFrame([inputs],columns=df.columns[:-1]))[0]
 if st.button("Click here to predict"):
     fig = go.Figure(go.Bar(
         x=[proba[0] * 100,proba[1] * 100],
-        y=["Not Survive","Survive"],
+        y=["Dead","Survive"],
         orientation="h",
         marker=dict(color=["rgb(26,118,255)" if prob == np.max(proba) else "rgb(55,83,109)" for prob in proba]),
     ))
@@ -95,7 +99,7 @@ if st.button("Click here to predict"):
         )
     st.plotly_chart(fig,use_container_width=True)
 
-    if predict == 1:
-        st.success("This patient will survive")
+    if predict == "Survived":
+        st.success("This patient is likely going to survive")
     else:
-        st.success("This patient won't survive")
+        st.success("This patient is likely going to die")
