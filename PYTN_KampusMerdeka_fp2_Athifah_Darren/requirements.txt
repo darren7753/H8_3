@@ -1,7 +1,6 @@
 numpy
-sympy
 pandas
-matplotlib
-seaborn
-scikit-learn
+plotly
 streamlit
+Pillow
+scikit-learn
