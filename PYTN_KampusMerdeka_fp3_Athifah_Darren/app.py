@@ -100,6 +100,6 @@ if st.button("Click here to predict"):
     st.plotly_chart(fig,use_container_width=True)
 
     if predict == "Survived":
-        st.success("This patient is likely going to survive")
+        st.success("This patient is likely to survive")
     else:
-        st.success("This patient is likely going to die")
+        st.success("This patient is likely to die")
