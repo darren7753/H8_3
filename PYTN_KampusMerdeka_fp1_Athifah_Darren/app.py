@@ -8,10 +8,10 @@ from joblib import load
 from PIL import Image
 
 # Load
-model1 = load("linear_regression.joblib")
-model2 = load("polynomial_2d_regression.joblib")
-model3 = load("polynomial_3d_regression.joblib")
-cover_img = Image.open("dataset-cover.png")
+model1 = load("PYTN_KampusMerdeka_fp1_Athifah_Darren/linear_regression.joblib")
+model2 = load("PYTN_KampusMerdeka_fp1_Athifah_Darren/polynomial_2d_regression.joblib")
+model3 = load("PYTN_KampusMerdeka_fp1_Athifah_Darren/polynomial_3d_regression.joblib")
+cover_img = Image.open("PYTN_KampusMerdeka_fp1_Athifah_Darren/dataset-cover.png")
 
 # Title
 st.markdown("<h1 style='text-align: center;'>Uber vs Lyft Price Prediction</h1>",unsafe_allow_html=True)
