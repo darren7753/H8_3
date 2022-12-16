@@ -5,3 +5,4 @@ streamlit
 Pillow
 scikit-learn
 yellowbrick
+factor-analyzer
