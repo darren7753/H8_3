@@ -1,0 +1,7 @@
+Component 1,Component 2,Component 3,Component 4,Component 5
+purchases,cash_advance,installments_purchases,balance,balance_frequency
+oneoff_purchases,cash_advance_frequency,purchases_frequency,minimum_payments,prc_full_payment
+oneoff_purchases_frequency,cash_advance_trx,purchases_installments_frequency,tenure,-
+purchases_trx,-,-,-,-
+credit_limit,-,-,-,-
+payments,-,-,-,-
