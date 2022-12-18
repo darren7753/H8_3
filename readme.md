@@ -1,3 +1,4 @@
+![PT HACKTIVATE](https://statics.hacktiv8.com/images/logo/hacktiv8-dark.webp)
 # Python for Data Science at PT Hacktivate
 
 Welcome to my GitHub repository for the [**Independent Study**](https://kampusmerdeka.kemdikbud.go.id/program/studi-independen/detail) program titled **Python for Data Science** at [**PT Hacktivate**](https://www.hacktiv8.com/), held by the [**Ministry of Education, Culture, Research, and Technology**](https://www.kemdikbud.go.id/main/). Throughout this program, I completed several **assignments** and **final projects**. I will briefly describe each assignment and final project below:
