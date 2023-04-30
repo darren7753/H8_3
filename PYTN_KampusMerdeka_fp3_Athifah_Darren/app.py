@@ -14,10 +14,21 @@ cover_img = Image.open("PYTN_KampusMerdeka_fp3_Athifah_Darren/dataset-cover.png"
 
 # Title
 st.markdown("<h1 style='text-align: center;'>Heart Failure Prediction</h1>",unsafe_allow_html=True)
+# st.markdown(
+#     "<p style='text-align: center;'>Made by <b><a href='https://www.linkedin.com/in/athifahrh/'>'Athifah Radhiyah Habibilah</a></b> & <b><a href='https://www.linkedin.com/in/mathewdarren/'>Mathew Darren Kusuma</a></b></p>",
+#     unsafe_allow_html=True
+# )
+
 st.markdown(
-    "<p style='text-align: center;'>Made by <b><a href='https://www.linkedin.com/in/athifahrh/'>'Athifah Radhiyah Habibilah</a></b> & <b><a href='https://www.linkedin.com/in/mathewdarren/'>Mathew Darren Kusuma</a></b></p>",
+    "<p style='text-align: center;'>Made by Group 9</p>",
     unsafe_allow_html=True
 )
+names = pd.DataFrame({
+    "Names":["'Athifah Radhiyah Habibilah", "Farhan Imam Naufal", "Mathew Darren Kusuma", "Putri Nur Alifah", "Reihan Putra Dewanto "],
+    "Student IDs": [24050120140167, 24050120140161, 24050120130042, 24050120140151, 24050120140044]
+})
+names.index += 1
+st.dataframe(names, use_container_width=True)
 st.image(cover_img)
 st.markdown("""<hr style="height:1px;border:none;color:#333;background-color:#333;"/>""",unsafe_allow_html=True)
 
