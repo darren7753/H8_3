@@ -28,7 +28,7 @@ names = pd.DataFrame({
     "Student IDs": ["24050120140167", "24050120140161", "24050120130042", "24050120140151", "24050120140044"]
 })
 names.index += 1
-st.dataframe(names, use_container_width=True)
+st.dataframe(names.to_string(float_format=lambda x: f"{x:.0f}"), use_container_width=True)
 st.image(cover_img)
 st.markdown("""<hr style="height:1px;border:none;color:#333;background-color:#333;"/>""",unsafe_allow_html=True)
 
