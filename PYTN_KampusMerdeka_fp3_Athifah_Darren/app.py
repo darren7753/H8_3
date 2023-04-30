@@ -25,7 +25,7 @@ st.markdown(
 )
 names = pd.DataFrame({
     "Names":["'Athifah Radhiyah Habibilah", "Farhan Imam Naufal", "Mathew Darren Kusuma", "Putri Nur Alifah", "Reihan Putra Dewanto "],
-    "Student IDs": [24050120140167, 24050120140161, 24050120130042, 24050120140151, 24050120140044]
+    "Student IDs": ["24050120140167", "24050120140161", "24050120130042", "24050120140151", "24050120140044"]
 })
 names.index += 1
 st.dataframe(names, use_container_width=True)
